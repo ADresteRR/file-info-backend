@@ -33,7 +33,7 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
         switch (file.mimetype) {
             case 'application/pdf':
                 // Use pdf-parse to get text and metadata from PDF files
-                const pdfParse = require('pdf-parse');
+                const pdfParse = require('pdf-parser');
                 pdfParse(file.buffer).then((data) => {
                     info.text = data.text;
                     info.metadata = data.metadata;
