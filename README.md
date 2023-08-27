@@ -1,6 +1,6 @@
 # RapidFort Offline Project
-### website : https://adresterr.github.io/anjan-rapidfort-front-end/
-### front-end repo : https://github.com/ADresteRR/anjan-rapidfort-front-end
+#### website : https://adresterr.github.io/anjan-rapidfort-front-end/
+#### front-end repo : https://github.com/ADresteRR/anjan-rapidfort-front-end
 # File Info API
 
 ## Description
