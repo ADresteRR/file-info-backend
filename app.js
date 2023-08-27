@@ -26,7 +26,7 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
         const info = {
             name: file.originalname,
             type: file.mimetype,
-            size: file.size,
+            size: file.size + "bytes",
         };
 
         // Get more information about the file based on its type
