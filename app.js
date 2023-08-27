@@ -20,7 +20,6 @@ app.get("/", (req, res) => {
 app.post('/upload', cors(), upload.single('file'), (req, res) => {
     // file uploaded by the user
     const file = req.file;
-
     // check whether any file is upload or not
     if (file) {
         // Get the basic information about the file
