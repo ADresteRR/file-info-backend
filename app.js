@@ -90,6 +90,6 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log('Server listening on port 3000');
 });
