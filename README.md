@@ -95,6 +95,3 @@ An object containing an error message.
 | ------- | ------ | ------------------- |
 | message | string | The error message   |
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE] file for more details.
