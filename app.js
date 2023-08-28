@@ -54,18 +54,6 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
                     res.json(info);
                 });
                 break;
-            case 'audio/mpeg':
-            case 'audio/wav':
-            case 'audio/ogg':
-                // Use sox to get duration and bitrate from audio files
-                const sox = require('sox');
-                sox.identify(file.buffer).then((data) => {
-                    info.duration = data.duration;
-                    info.bitrate = data.bitRate;
-                    // Send the information as a JSON response
-                    res.json(info);
-                });
-                break;
             case 'application/msword':
             case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
                 // Use mammoth to get paragraphs and styles from Word documents
