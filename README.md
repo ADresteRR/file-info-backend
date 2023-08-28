@@ -112,6 +112,8 @@ An object containing an error message.
 
 You can also use this API as a Docker container. To do so, you need to have Docker installed on your machine. Then, you can pull the image from the Docker Hub repository:
 
+For latest visit: https://hub.docker.com/r/adresterrjr/rapidfort/tags 
+
 ```bash
 docker pull adresterrjr/rapidfort
 ```
@@ -138,5 +140,6 @@ You can use this URL to send requests to the API endpoints as described in the [
 ```bash
 curl -F file=@test.pdf https://rapidfort-back-end-production.up.railway.app/upload
 ```
+#### If wanted to Use the service with the UI visit: https://adresterr.github.io/anjan-rapidfort-front-end/
 
 
