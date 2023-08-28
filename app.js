@@ -32,38 +32,32 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
         // Get more information about the file based on its type
         switch (file.mimetype) {
             case 'application/pdf':
-                // Use pdf-parse to get text and metadata from PDF files
                 const pdfParse = require('pdf-parse');
                 pdfParse(file.buffer).then((data) => {
                     info.text = data.text;
                     info.metadata = data.metadata;
-                    // Send the information as a JSON response
                     res.json(info);
                 });
                 break;
             case 'image/jpeg':
             case 'image/png':
             case 'image/gif':
-                // Use sharp to get dimensions and format from image files
                 const sharp = require('sharp');
                 sharp(file.buffer).metadata().then((data) => {
                     info.width = data.width;
                     info.height = data.height;
                     info.format = data.format;
-                    // Send the information as a JSON response
                     res.json(info);
                 });
                 break;
             case 'application/msword':
             case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
-                // Use mammoth to get paragraphs and styles from Word documents
                 const mammoth = require('mammoth');
                 mammoth.extractRawText(file.buffer).then((data) => {
                     info.paragraphs = data.value.split('\n').length;
                     info.styles = data.messages
                         .filter((message) => message.type === 'warning')
                         .map((message) => message.message);
-                    // Send the information as a JSON response
                     res.json(info);
                 });
                 break;
@@ -72,7 +66,7 @@ app.post('/upload', cors(), upload.single('file'), (req, res) => {
                 res.json(info);
         }
     } else {
-        // Send an error message if no file was uploaded
+        // if no file is uploaded send 400
         res.status(400).send('No file was uploaded');
     }
 });
