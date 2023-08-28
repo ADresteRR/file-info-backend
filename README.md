@@ -3,9 +3,13 @@
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Docker](#Docker)
+- [Hosted Service](#HostedService)
 
 #### website : https://adresterr.github.io/anjan-rapidfort-front-end/
 #### front-end repo : https://github.com/ADresteRR/anjan-rapidfort-front-end
+#### hosted API link: https://rapidfort-back-end-production.up.railway.app
+
 # File Info API
 <a name="Description"></a>
 ## Description
@@ -102,6 +106,8 @@ An object containing an error message.
 | ------- | ------ | ------------------- |
 | message | string | The error message   |
 
+<a name="Docker"></a>
+
 ## Docker
 
 You can also use this API as a Docker container. To do so, you need to have Docker installed on your machine. Then, you can pull the image from the Docker Hub repository:
@@ -118,7 +124,7 @@ docker run -p 3000:3000 adresterrjr/rapidfort
 
 You can then access the API endpoints as described in the [Usage](#usage) section.
 
-
+<a name="HostedService"></a>
 ## Hosted Service
 
 You do not need to download the repo or install any dependencies to use this API. You can simply use the hosted service on Railway that is accessible by anyone over the internet. The URL for the hosted service is:
@@ -131,12 +137,6 @@ You can use this URL to send requests to the API endpoints as described in the [
 
 ```bash
 curl -F file=@test.pdf https://rapidfort-back-end-production.up.railway.app/upload
-```
-
-You can also visit the URL in your browser to see the Swagger UI documentation web page. For example:
-
-```bash
-https://rapidfort-back-end-production.up.railway.app/docs
 ```
 
 
