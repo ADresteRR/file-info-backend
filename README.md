@@ -1,12 +1,17 @@
 # RapidFort Offline Project
+## Content
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+
 #### website : https://adresterr.github.io/anjan-rapidfort-front-end/
 #### front-end repo : https://github.com/ADresteRR/anjan-rapidfort-front-end
 # File Info API
-
+<a name="Description"></a>
 ## Description
 
 File Info API is an API that returns information about uploaded files. It supports various file types, such as PDF, image, audio, video, and Word documents. It uses different modules to extract information from the files, such as pdf-parse, sharp, sox, fluent-ffmpeg, and mammoth.
-
+<a name="Installation"></a>
 ## Installation
 
 To install the dependencies for this project, run the following command:
@@ -14,7 +19,7 @@ To install the dependencies for this project, run the following command:
 ```bash
 npm install
 ```
-
+<a name="Usage"></a>
 ## Usage
 
 To start the server on port 3000, run the following command:
@@ -96,4 +101,42 @@ An object containing an error message.
 | Name    | Type   | Description         |
 | ------- | ------ | ------------------- |
 | message | string | The error message   |
+
+## Docker
+
+You can also use this API as a Docker container. To do so, you need to have Docker installed on your machine. Then, you can pull the image from the Docker Hub repository:
+
+```bash
+docker pull adresterrjr/rapidfort
+```
+
+To run the container on port 3000, use the following command:
+
+```bash
+docker run -p 3000:3000 adresterrjr/rapidfort
+```
+
+You can then access the API endpoints as described in the [Usage](#usage) section.
+
+
+## Hosted Service
+
+You do not need to download the repo or install any dependencies to use this API. You can simply use the hosted service on Railway that is accessible by anyone over the internet. The URL for the hosted service is:
+
+```bash
+https://rapidfort-back-end-production.up.railway.app
+```
+
+You can use this URL to send requests to the API endpoints as described in the [Usage](#usage) section. For example:
+
+```bash
+curl -F file=@test.pdf https://rapidfort-back-end-production.up.railway.app/upload
+```
+
+You can also visit the URL in your browser to see the Swagger UI documentation web page. For example:
+
+```bash
+https://rapidfort-back-end-production.up.railway.app/docs
+```
+
 
