@@ -6,9 +6,8 @@
 - [Docker](#Docker)
 - [Hosted Service](#HostedService)
 
-#### website : https://adresterr.github.io/anjan-rapidfort-front-end/
-#### front-end repo : https://github.com/ADresteRR/anjan-rapidfort-front-end
-#### hosted API link: https://rapidfort-back-end-production.up.railway.app
+#### website : https://adresterr.github.io/file-info-front-end/
+#### front-end repo : https://github.com/ADresteRR/file-info-front-end
 
 # File Info API
 <a name="Description"></a>
