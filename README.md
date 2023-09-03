@@ -1,5 +1,5 @@
-# RapidFort Offline Project
-## Content
+
+# Content
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
